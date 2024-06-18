@@ -9,4 +9,8 @@ There are two sources:
 
 Open a browser and view the applicaton at ` http://localhost:3838`
 
+`git remote remove origin`
+
+`gh repo create rustkas/r-docker-dev --public --source=. --remote=origin`
+
 `git remote add origin https://github.com/rustkas/r-docker-dev.git`
