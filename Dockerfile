@@ -1,15 +1,15 @@
 # Use an official R runtime as a parent image
-# The 4.1.2 version is choosen for compatibility with libpq-dev library
-FROM r-base:4.1.2 
+FROM r-base:latest
 
-# Install required libraries
-RUN apt update
+# Install usrmerge and ensure /usr merge is done before installing other packages
+RUN apt update 
+
+
+# Update and install required libraries
 RUN apt install libpq-dev -y
 
-# Install R packages, if you want to install also
-# the dependencies for Postgres install also
-# RPostgres
-RUN R -e "install.packages(c('shiny', 'shinyalert'))" 
+# Install R packages
+RUN R -e "install.packages(c('shiny', 'shinyalert'))"
 
 # Set new workdir
 WORKDIR /home/app

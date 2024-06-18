@@ -6,3 +6,7 @@ There are two sources:
 
 - `src` for the base app
 - `src_db` with the database connection in place
+
+Open a browser and view the applicaton at ` http://localhost:3838`
+
+`git remote add origin https://github.com/rustkas/r-docker-dev.git`
